@@ -1,0 +1,33 @@
+// primary color
+$cyan: hsl(179, 62%, 43%);
+$brightYellow: hsl(71, 73%, 54%);
+
+// neutral color
+$ligthGray: hsl(204, 43%, 93%);
+$grayishBlue: hsl(218, 22%, 67%);
+
+// font weight
+$fontweight: (
+  "regular": 400,
+  "bolder": 700,
+);
+
+// mixin style
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// media query
+@mixin mobile {
+  @media screen and (max-width: 89.9375rem) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 90rem) {
+    @content;
+  }
+}

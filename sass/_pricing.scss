@@ -1,0 +1,10 @@
+@import "./variables";
+
+.header {
+  @include flexCenter;
+
+  .card__panel--1 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+}
