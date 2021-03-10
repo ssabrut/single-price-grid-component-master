@@ -3,8 +3,62 @@
 .header {
   @include flexCenter;
 
-  .card__panel--1 {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+  @include mobile {
+    flex-direction: column;
+    margin-top: 4.5rem;
+  }
+
+  .card__panel--1,
+  .card__panel--2 {
+    position: relative;
+    background-color: white;
+    border-radius: 0.5rem 0.5rem 0 0;
+    box-shadow: 3px 0 8px rgba($black, 0.1);
+
+    .content {
+      @include flexCenter;
+      flex-direction: column;
+      align-items: flex-start;
+      position: absolute;
+      height: 100%;
+      width: 80%;
+      margin-left: 1.625rem;
+
+      h2 {
+        color: $cyan;
+      }
+
+      #guarantee {
+        color: $brightYellow;
+        font-weight: map-get($fontweight, bolder);
+      }
+
+      p {
+        color: $grayishBlue;
+        line-height: 1.5rem;
+        font-weight: map-get($fontweight, regular);
+      }
+
+      @include mobile {
+        justify-content: space-evenly;
+      }
+    }
+
+    @include mobile {
+      width: 20rem;
+      height: 17.5rem;
+    }
+  }
+
+  .card__panel--2 {
+    border-radius: 0%;
+    background-color: $cyan;
+    box-shadow: 3px 0 8px rgba($black, 0.1);
+
+    .content {
+      h2 {
+        color: $ligthGray;
+      }
+    }
   }
 }

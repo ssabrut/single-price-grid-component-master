@@ -9,6 +9,7 @@ body {
   font-family: "Karla", sans-serif;
   font-size: 16px;
   overflow: hidden;
+  background-color: #e5eff5;
 }
 
 .header {
@@ -23,10 +24,92 @@ body {
           align-items: center;
 }
 
-.header .card__panel--1 {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+@media screen and (max-width: 89.9375rem) {
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 4.5rem;
+  }
+}
+
+.header .card__panel--1,
+.header .card__panel--2 {
+  position: relative;
+  background-color: white;
+  border-radius: 0.5rem 0.5rem 0 0;
+  -webkit-box-shadow: 3px 0 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 3px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.header .card__panel--1 .content,
+.header .card__panel--2 .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  margin-left: 1.625rem;
+}
+
+.header .card__panel--1 .content h2,
+.header .card__panel--2 .content h2 {
+  color: #2ab2af;
+}
+
+.header .card__panel--1 .content #guarantee,
+.header .card__panel--2 .content #guarantee {
+  color: #c0df34;
+  font-weight: 700;
+}
+
+.header .card__panel--1 .content p,
+.header .card__panel--2 .content p {
+  color: #98a6bd;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 89.9375rem) {
+  .header .card__panel--1 .content,
+  .header .card__panel--2 .content {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 89.9375rem) {
+  .header .card__panel--1,
+  .header .card__panel--2 {
+    width: 20rem;
+    height: 17.5rem;
+  }
+}
+
+.header .card__panel--2 {
+  border-radius: 0%;
+  background-color: #2ab2af;
+  -webkit-box-shadow: 3px 0 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 3px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.header .card__panel--2 .content h2 {
+  color: #e5eff5;
 }
 /*# sourceMappingURL=main.css.map */
